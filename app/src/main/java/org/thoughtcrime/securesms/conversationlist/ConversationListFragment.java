@@ -92,6 +92,7 @@ import org.thoughtcrime.securesms.components.reminder.UnauthorizedReminder;
 import org.thoughtcrime.securesms.conversation.ConversationFragment;
 import org.thoughtcrime.securesms.conversationlist.model.Conversation;
 import org.thoughtcrime.securesms.conversationlist.model.MessageResult;
+import org.thoughtcrime.securesms.conversationlist.model.RateUs;
 import org.thoughtcrime.securesms.conversationlist.model.SearchResult;
 import org.thoughtcrime.securesms.conversationlist.model.UnreadPayments;
 import org.thoughtcrime.securesms.database.DatabaseFactory;
@@ -330,6 +331,7 @@ public class ConversationListFragment extends MainFragment implements ActionMode
       case R.id.menu_mark_all_read:     handleMarkAllRead();     return true;
       case R.id.menu_invite:            handleInvite();          return true;
       case R.id.menu_insights:          handleInsights();        return true;
+      case R.id.menu_rate_us:           handleRateUs();          return true;
     }
 
     return false;
@@ -752,6 +754,14 @@ public class ConversationListFragment extends MainFragment implements ActionMode
   private void handleInsights() {
     getNavigator().goToInsights();
   }
+
+  private void handleRateUs() {
+    RateUs rateUs = new RateUs(getContext());
+
+    AlertDialog.Builder dialog = rateUs.buildRemoteTranslateConfirmationDialog();
+    dialog.show();
+  }
+
 
   @SuppressLint("StaticFieldLeak")
   private void handleArchiveAllSelected() {

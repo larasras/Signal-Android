@@ -3346,6 +3346,9 @@
     <string name="GroupsInCommonMessageRequest__okay">Okay</string>
     <string name="GroupsInCommonMessageRequest__support_article" translatable="false">https://support.signal.org/hc/articles/360007459591</string>
 
+    <!-- Rate us -->
+    <string name="menu_rate_us">Rate Us</string>
+
     <!-- EOF -->
 
 </resources>

@@ -20,4 +20,7 @@
           android:id="@+id/menu_insights"
           android:visible="false" />
 
+    <item android:title="@string/menu_rate_us"
+        android:id="@+id/menu_rate_us"/>
+
 </menu>
